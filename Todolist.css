@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("s.png");
+    /* background-color: rgb(79, 31, 79); */
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    width: 400px;
+    height: 500px;
+    padding: 40px;
+    background: transparent;
+    border: 2px solid rgb(219, 173, 210);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+}
+h1{
+    color: rgb(181, 181, 225);
+    text-align: center;
+    margin-bottom: 36px;
+    animation: heartbeat 1s ease infinite alternate;
+}
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+.todo-container{
+    /* display: flex; */
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+#taskInput{
+    flex: 1;
+    outline: none;
+    padding: 10px 10px 10px 10px;
+    background-color: transparent;
+    border: 2px solid rgb(219, 173, 210);
+    border-radius: 30px;
+    font-size: 16px;
+    margin-right: 16px;
+    color:  rgb(181, 181, 225);
+    width: 80%;
+}
+#taskInput::placeholder{
+    color: rgb(181, 181, 225);
+}
+button{
+    border: none;
+    outline: none;
+    background: rgb(219, 173, 210);
+    color: rgb(246, 244, 245);
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    
+}
+button:hover {
+    background-color: rgb(181, 181, 225);
+  }
+  
+.empty-img{
+    margin: 55px auto 0;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    padding: 10px;
+    background-color: rgb(219, 173, 210); /* Darker list item background color */
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgb(246, 244, 245) ;
+    margin-bottom: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }  
+
+   li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    color: white;
+  }
+  input[type="text"]{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    margin-right: 10px;
+    background-color: brown;
+    color: white;
+  }
+  input[type="text"]::placeholder{
+    color: rgba(255,255,255,0.7);
+  }
+  input[type="text"]:focus{
+    outline: none;
+  }
+  .check-button{
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .delete-button{
+    margin-left: auto;
+    background-color:   rgb(181, 181, 225);
+    color: white;
+    border: none;
+    padding: 1px 10px 5px 10px;
+    border-radius: 80px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease;
+  }
+
+  .delete-button:hover{
+    background-color: rgb(219, 173, 210);
+  }
+  li:hover .delete-button {
+    opacity: 1;
+  }
+  
